@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de TROUDI RAMY</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #86b4d0;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        header {
+            position: relative;
+            height: 50vh; /* Hauteur réduite */
+            overflow: hidden;
+            text-align: center;
+        }
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3vw;
+            color: whitesmoke; 
+            position: relative;
+            top: 30%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        header h3 {
+            margin: 0;
+            font-size: 1.5vw;
+            color: whitesmoke; 
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        section {
+            padding: 100px 20px 50px 20px;
+            text-align: center;
+        }
+        .about, .projects, .contact {
+            padding: 5px;
+        }
+        .about {
+            background: #96c099; /* Couleur verte pâle */
+            color: black; /* Couleur bleue */
+        }
+        .about p{
+            font-size: 1.5vw;
+        }
+        .projects h2, .contact h2, .about h2{
+            color: black; /* Couleur bleue */
+            font-size: 2.3vw; 
+        }
+        .carousel {
+            position: relative;
+            width: 92%; /* Ajuste la largeur de la section du carousel */
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%; /* Assure que le carousel occupe toute la largeur de son conteneur */
+        }
+        .carousel-item {
+            flex: 0 0 100%; /* Ajuste la largeur des éléments */
+            box-sizing: border-box;
+            padding: 0px;
+            text-align: center; /* Centre le contenu */
+            width: 100%; /* Assure que chaque élément occupe toute la largeur du carousel */
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .contact{
+            background: #96c099; /* Couleur verte pâle */
+        }
+        .contact p{
+            color: black;
+            font-size: 0.9vw;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .btn-on-image {
+            position: absolute;
+            bottom: 10%;
+            left: 8%;
+            background-color: #96c099; /*couleur du fond */
+            color: #ffffff; /*couleur du texte */
+            border-radius: 10%;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 2vw;
+        }
+        .btn-on-image:hover{
+            transition: transform 0.5s ease-in-out;
+            color: whitesmoke;
+            background-color: #86b4d0;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact form input, .contact form textarea {
+            width: 80%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #00ffdd; /* Couleur bleue */
+            color: #0a0a0a;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 5px;
+            text-align: center;
+        }
+        footer p{
+            font-size: 0.6vw;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop>
+            <source src="nature-1-5.mp4" type="video/mp4">
+        </video>
+        <h1>TROUDI RAMY</h1>
+        <h3>A la découverte du monde en passant par soi !!!</h3>
+    </header>
+
+    <section class="about">
+        <h2><u>À PROPOS DE MOI</u></h2>
+        <p>Je suis actuellement étudiant à GEII à l'université de bordeaux en 1er année, voulant me spécialisé vers l'Automatisme qui met en valeur les compétences d'électronique et d'Informatique. Etant mes deux domaines qui me passionne le plus. Vous me découvrirez a travers ce PortFolio qui va aborder mes projets et mes compétences.</p>
+    </section>
+
+
+    <section class="projects">
+    <h2><u>Mes Projets</u></h2>
+    <div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <div class="image-container">
+                <img src="maquette.JPG" class="project-image">
+                <a href="SLR.html" class="btn-on-image">Cliquez ici</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="image-container">
+                <img src="img-slide2_cut.JPG" class="project-image">
+                <a href="TDB_2.html" class="btn-on-image">Cliquez ici</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="image-container">
+                <img src="img-slide3_cut.png" class="project-image">
+                <a href="KART.html" class="btn-on-image">Cliquez ici</a>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+</div>
+</section>
+
+
+    <section class="contact">
+        <h2><u>Contact</u></h2>
+        <p>Email : <u>ramytroudi@gmail.com</u></p>
+        <p>Téléphone : <u>06 40 59 40 58</u></p>
+        <p>Linkedin : <u>Troudi Ramy</u></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TROUDI RAMY. Tous droits réservés.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="app-2.js"></script>
+    <script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const totalItems = document.querySelectorAll('.carousel-item').length;
+        let currentIndex = 0;
+
+        function showProject(index) {
+            currentIndex = (index + totalItems) % totalItems;
+            const offset = -currentIndex * 100;
+            carouselInner.style.transform = 'translateX(' + offset + '%)';
+        }
+
+        prevBtn.addEventListener('click', () => {
+            showProject(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showProject(currentIndex + 1);
+        });
+
+        showProject(currentIndex);
+    </script>
+
+
+</body>
+</html>

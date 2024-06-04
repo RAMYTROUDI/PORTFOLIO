@@ -1,0 +1,838 @@
+/*body {
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #96c099;
+}
+
+
+.main-video { 
+    height: 55vh;
+    line-height: 2px;
+    z-index: -1;
+    
+}
+
+.title{
+    font-size: 4vw; 
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.3em;
+    width: 50%;
+    height: 10%;
+    top: 0;
+    left: 32%;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+
+
+.layer-about-me{
+    margin-top: 3%;
+    height: 40%;
+}
+
+.title-about-me{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.content-about-me{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 0; 
+    line-height: 2em;
+    margin-left: 3%;
+    margin-right: 3%;
+}*/
+
+
+
+/* dimension de la fenetre  
+
+ --->requis height: 850px;*/
+
+/*.layer-project{
+    width: 100%;
+    height: 55vw;
+    background-color: #86b4d0;
+}
+
+.project{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 96%;
+    height: 40vw;
+    left: 2%;
+    right: 2%;
+    overflow: hidden;
+}
+
+.carousel {
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap; /* Empêcher le retour à la ligne des éléments */
+}
+/*
+.image-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;  Pour afficher trois images par ligne 
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;    
+    font-size: 1vw;
+    background-color: #96c099;
+    border-radius: 34%;
+    width: 10%;
+    border: 2px solid black;
+}
+
+
+.image-text:hover{
+    background-color: #86b4d0;
+}
+
+.image-text a{
+    text-decoration: none ;
+}
+
+.sub-title-image1{
+    color: white;
+}
+
+
+.arrow.right{
+    position: absolute;
+    top: 46%;
+    right: 1%;
+    transform: translateY(-50%);
+    font-size: 3vw; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;  
+    color: black;
+}
+
+
+.arrow.left{
+    position: absolute;
+    top: 46%;
+    left: 1%;
+    transform: translateY(-50%);
+    font-size: 3vw; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1; 
+}
+
+
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+
+
+.layer-contact{
+    height: 25vh;
+    width: 100%;
+}
+
+.contact{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.partie1-contact{
+    width: 100%;
+}
+
+.email{
+    padding-inline: 6%;
+    float: left;
+    margin-left: 4%;
+}
+
+.number{
+    padding-inline: 6%;
+    float: left;
+    margin-left: 10%;
+}
+
+.linkedin{
+    float: left;
+    margin-left: 17%;
+}
+
+*/
+
+
+
+
+#deuxieme-page{
+    background-color: whitesmoke;
+}
+
+
+.parallax-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;<
+    overflow: visible;
+}
+
+
+
+.parallax-layer {
+    flex: 0 0 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100;
+    transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: relative;
+    filter: blur(10px); /* Pour s'assurer que l'image est nette initialement */
+    opacity: 0.5; /* Réduisez l'opacité si nécessaire */
+}
+
+.parallax-layer.visible {
+    filter: blur(0); /* Ajoutez un flou lorsque l'élément est visible */
+    opacity: 1; /* Réduisez l'opacité si nécessaire */
+}
+
+
+#retour{
+    font-size: 3.3vw;
+    float: left;
+}
+#retour a{
+    text-decoration: none;
+    color: black;
+}
+
+#layer1 {
+    background-image: url('kart.JPG');
+    opacity: 0.9;
+    z-index: 1;
+}
+                                    /*Change la police d'écriture
+                                    Trouve du texte pour expliquer ce que ta fait petit-titre
+                                    échange les couleur quand on passe dessus le texte est blanc et le fond est noir
+                                    mais une transition partant du bas vers le haut
+                                    mais une apparation du texte quand tu vient sur la prochaine img*/
+
+
+#titre h1{
+    font-family: ;
+    position: absolute;
+    top: vh;
+    left: 35vw;
+    font-size: 3vw;
+    z-index: 3;
+}
+
+#titre ::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+#petit-titre1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    right: 60vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+
+
+#layer1, #layer2, #layer3, #layer4, #layer5, #layer6 {
+    background-size: cover;
+    background-position: center;
+}
+
+.text-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 3;
+}
+
+.text-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 3;
+}
+
+#petit-titre1 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6vw;
+    color: black;
+}
+
+
+
+#petit-titre1_lien{
+    text-decoration: none;
+}
+
+#petit-titre1 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+#petit-titre2 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 3vh;
+    left: 85vw;
+    font-size: 1vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+#petit-titre2 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2vw;
+    color: black;
+}
+
+#petit-titre2 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+
+::selection {
+    background: initial; /* Background color of the selected text */
+    color: initial; /* Color of the selected text */
+}
+
+
+
+#layer2 {
+    background-image: url('kart_gauche.JPG');
+    opacity: 0.9;
+    z-index: 2;
+}
+
+
+#layer2-petit-titre1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+#layer2-petit-titre1 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6vw;
+    color: black;
+}
+
+#layer2-petit-titre1 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-card {
+    width: 300px; /* Fixe la largeur de la carte */
+    height: 200px; /* Fixe la hauteur de la carte */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card .front, .flip-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Permet au texte de passer à la ligne */
+    padding: 10px; /* Ajuste le padding pour le texte */
+    z-index: 7;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.flip-card .front2, .flip-card .back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Permet au texte de passer à la ligne */
+    padding: 10px; /* Ajuste le padding pour le texte */
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.flip-card .front {
+    color: black;
+    font-size: 1.6vw;
+    background-color: #A7E0E0;
+}
+
+.flip-card .front2{
+    color: black;
+    font-size: 1.6vw;
+    background-color: #E2E9C0;
+}
+
+.flip-card .back {
+    font-size: 1.1vw;
+    letter-spacing: 0.05vw;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 2;
+    background-color: #A7E0E0;
+}
+
+.flip-card .back2 {
+    font-size: 1.1vw;
+    letter-spacing: 0.05vw;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 2;
+    background-color: #E2E9C0;
+}
+
+/* Custom position for the card */
+.custom-position1 {
+    position: absolute; /* or relative, depending on your layout */
+    top: 20vh; /* Adjust the top position */
+    left: 20vw; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2;
+}
+
+
+.custom-position2 {
+    position: absolute; /* or relative, depending on your layout */
+    top: 20vh; /* Adjust the top position */
+    left: 45vw; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2;
+}
+
+
+
+#layer3 {
+    background-image: url('kart_droite.JPG');
+    opacity: 0.9;
+    z-index: 1;
+}
+
+#layer3-petit-titre1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 0vh;
+    left: 20vw;
+    right: 1vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+#layer3-petit-titre1 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6vw;
+    color: black;
+}
+
+#layer3-petit-titre1 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+#layer3-petit-titre1-lien{
+    text-decoration: none;
+}
+
+
+#layer3-petit-titre1-lien2{
+    text-decoration: none;
+}
+
+#layer3-petit-titre2 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 25vh;
+    left: 40vw;
+    right: 1vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+#layer3-petit-titre2 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6vw;
+    color: black;
+}
+
+#layer3-petit-titre2 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+#layer3-petit-titre2-lien2{
+    text-decoration: none;
+}
+
+#layer4 {
+    background-image: url('kart_devant.JPG');
+    opacity: 0.9;
+    z-index: 1;
+}
+
+
+#layer5 {
+    background-image: url('fond-perso.png');
+    opacity: 0.9;
+    z-index: 1;
+}
+
+#layer5-petit-titre1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+#layer5-petit-titre1 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6vw;
+    color: black;
+}
+
+#layer5-petit-titre1 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+.boite_video {
+    position: absolute;
+    top: 44vh;
+    left: 67vw;
+    transform: translate(-50%, -50%);
+}
+
+.vid_presentation {
+    width: 60vw; /* Ajustez la largeur selon vos besoins */
+    height: 70vh;
+}
+
+
+
+
+
+
+
+#layer6{
+    background-image: url('Fond-perso3.jpg');
+    opacity: 0.9;
+    z-index: 1;
+}
+
+#layer6-petit-titre1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 2vh;
+    left: 5vw;
+    font-size: 1.9vw;
+    z-index: 3;
+}
+
+#layer6-petit-titre1 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+
+.flip-card3 .front3, .flip-card3 .back3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Permet au texte de passer à la ligne */
+    padding: 10px; /* Ajuste le padding pour le texte */
+    z-index: 7;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.flip-card4 .front4, .flip-card4 .back4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Permet au texte de passer à la ligne */
+    padding: 10px; /* Ajuste le padding pour le texte */
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.flip-card3 .front3 {
+    color: black;
+    font-size: 2vw;
+    background-color: rgb(192, 0, 0, 1.0);
+}
+
+.flip-card4 .front4{
+    color: black;
+    font-size: 2vw;
+    background-color: rgb(247, 145, 82, 1.0);
+}
+
+.flip-card3 .back3 {
+    font-size: 1.6vw;
+    letter-spacing: 0.05vw;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 2;
+    background-color: rgb(192, 0, 0, 1.0);
+}
+
+.flip-card4 .back4 {
+    font-size: 1.6vw;
+    letter-spacing: 0.05vw;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 2;
+    background-color: rgb(247, 145, 82, 1.0);
+}
+
+/* Custom position for the card */
+.custom-position3 {
+    position: absolute; /* or relative, depending on your layout */
+    top: 30vh; /* Adjust the top position */
+    left: 20vw; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2;
+}
+
+.custom-position4 {
+    position: absolute; /* or relative, depending on your layout */
+    top: 30vh; /* Adjust the top position */
+    left: 70vw; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2;
+}
+
+.flip-card3{
+    width: 25vw; /* Fixe la largeur de la carte */
+    height: 35vh; /* Fixe la hauteur de la carte */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.flip-card3:hover {
+    transform: rotateY(180deg);
+}
+
+#layer6-petit-titre2 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 95vh;
+    left: 45vw;
+    font-size: 0.9vw;
+    z-index: 3;
+}
+
+#layer6-petit-titre2 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.flip-card4 {
+    width: 25vw; /* Fixe la largeur de la carte */
+    height: 35vh; /* Fixe la hauteur de la carte */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.flip-card4:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card3 .front3, .flip-card4 .back4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Permet au texte de passer à la ligne */
+    padding: 10px; /* Ajuste le padding pour le texte */
+    z-index: 7;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.flip-card3 .front3, .flip-card4 .back4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    text-align: center; /* Centrer le texte */
+    word-wrap: break-word; /* Permet au texte de passer à la ligne */
+    padding: 10px; /* Ajuste le padding pour le texte */
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.flip-card3 .front3 {
+    color: black;
+    font-size: 1.6vw;
+    background-color: rgb(192, 0, 0, 1.0);
+}
+
+.flip-card4 .front4{
+    color: black;
+    font-size: 1.6vw;
+    background-color: rgb(247, 145, 82, 1.0);
+}
+
+.flip-card3 .back3 {
+    font-size: 1.1vw;
+    letter-spacing: 0.05vw;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 2;
+    background-color: rgb(242, 220, 219, 1.0);
+}
+
+.flip-card4 .back4 {
+    font-size: 1.1vw;
+    letter-spacing: 0.05vw;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 2;
+    background-color: rgb(253, 234, 218, 1.0);
+}
+
+/* Custom position for the card */
+.custom-position3 {
+    position: absolute; /* or relative, depending on your layout */
+    top: 27vh; /* Adjust the top position */
+    left: 25vw; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2;
+}
+
+
+.custom-position4 {
+    position: absolute; /* or relative, depending on your layout */
+    top: 27vh; /* Adjust the top position */
+    left: 60vw; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 2;
+}
+
+footer {;
+    text-align: center;
+}
+footer p{
+    font-size: 0.6vw;
+}
+
+
+
+
+
+#layer1-SLR{
+    background-image: url(img-avion1-cut.jpg);
+}
