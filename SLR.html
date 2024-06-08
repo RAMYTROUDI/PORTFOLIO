@@ -10,26 +10,66 @@
             height: 100vh;
             font-family: Arial, sans-serif;
         }
-
-        .Layer1, .Layer2, .Layer3 {
+        .parallax-container {
+            height: 100vh;
+            width: 100%;
             position: relative;
-            width: 100%;
-            height: 100vh; /* Chaque section prend la moitié de la hauteur de la fenêtre */
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;<
+            overflow: visible;
         }
-        .Layer1 img, .Layer2 img, .Layer3 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .parallax-layer {
+            flex: 0 0 100%;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100;
+            transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            position: relative;
+            filter: blur(10px); /* Pour s'assurer que l'image est nette initialement */
+            opacity: 0.5; /* Réduisez l'opacité si nécessaire */
         }
-
+        .parallax-layer.visible {
+            filter: blur(0); /* Ajoutez un flou lorsque l'élément est visible */
+            opacity: 1; /* Réduisez l'opacité si nécessaire */
+        }
+        #layer1 {
+            background-image: url('fond-bleue.JPG');
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #layer2 {
+            background-image: url('fond-bleue2.JPG');
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #layer3 {
+            background-image: url('fond-bleue3.JPG');
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #layer1, #layer2, #layer3, #layer4, #layer5, #layer6 {
+            background-size: cover;
+            background-position: center;
+        }
+        .text-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+            z-index: 3;
+        }
+        .text-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+            z-index: 3;
+        }
         #titre {
+            color: black;
             position: absolute;
             top: 8vh;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 2vw;
-            color: white;
             text-align: center;
             margin: 0;
         }
@@ -38,13 +78,14 @@
             top: 20px;
             left: 20px;
             font-size: 3.3vw;
+        }
+        #retour a{
+            color: black;
             text-decoration: none;
-            color: white;
         }
         #petit-titre2 {
             position: absolute;
             font-size: 1.5vw;
-            color: white;
             top: 3vh;
             right: 1.5vw;
             transition: font-size 0.2s ease;
@@ -53,36 +94,81 @@
             font-family: "Rubik", sans-serif;
             font-size: 1.8vw;
         }
+        #petit-titre3 {
+            position: absolute;
+            font-size: 1.5vw;
+            top: 25vh;
+            left: 10vw;
+            transition: font-size 0.2s ease;
+        }
+        #petit-titre3 p:hover {
+            font-family: "Rubik", sans-serif;
+            font-size: 1.8vw;
+        }
+        #layer2-petit-titre1 {
+            position: absolute;
+            font-size: 1.5vw;
+            top: 15vh;
+            left: 5vw;
+            transition: font-size 0.2s ease;
+        }
+        #layer2-petit-titre1 p:hover {
+            font-family: "Rubik", sans-serif;
+            font-size: 1.8vw;
+        }
+        #lien_SLR_CDC{
+            text-decoration: none;
+        }
         .Layer2 h1 {
             position: absolute;
             top: 20px;
             left: 20px;
             font-size: 3vw;
-            color: white;
         }
         .Layer3 h1 {
             position: absolute;
             top: 20px;
             left: 20px;
             font-size: 3vw;
-            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="Layer1">
-        <img src="fond-bleue.jpg" alt="Image de fond">
-        <div id="retour" ><a href="index.html" style="color: white; text-decoration: none;">←</a></div>
-        <div id="titre" ><h1><u>Projet SLR</u></h1></div>
-        <div id="petit-titre2"><p>Fait le 18/09/23</p></div>
-    </div>
-    <div class="Layer2">
-        <img src="fond-bleue2.jpg" >
-        <h1>blablabla</h1>
-    </div>
-    <div class="Layer3">
-        <img src="fond-bleue3.jpg" >
-        <h1>Mais non</h1>
-    </div>
-</body>
-</html>
+    <div class="parallax-container">     
+        <div class="parallax-layer" id="layer1">
+            <div id="retour"><a href="index.html">←</a></div>
+            <div id="titre" ><h1><u>Son et Lumière d'un Rafale</u></h1></div>
+            <div id="petit-titre2"><p>Commencer le 18/09/23</p></div>
+            <div id="petit-titre3"><p>Ce projet a été réaliser avec l'aide du cahier des charges que le client a rédiger.<br><br><a href="SLR_CDC_V1.pdf" target="_BLANK" id="lien_SLR_CDC"><i>(CDC)</i></a></p></div>                       
+        </div>                           
+        <div class="parallax-layer" id="layer2">
+            <div id="layer2-petit-titre1"><p>Non c'est billy</p></div>
+        </div>                           
+        <div class="parallax-layer" id="layer3">
+        </div>                           
+    </div>                               
+    <script src="app.js"></script>       
+    <script src="app-2.js"></script>     
+</body>                                  
+</html>                                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+            

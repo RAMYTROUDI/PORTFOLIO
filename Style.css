@@ -346,15 +346,28 @@
     color: whitesmoke;
 }
 
-
-
-::selection {
-    background: initial; /* Background color of the selected text */
-    color: initial; /* Color of the selected text */
+#CR_KAH_Box p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 40vh;
+    right: 2vw;
+    left: 75vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+    text-decoration: none;
+    color: black;
 }
 
-
-
+#CR_KAH_Box p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.7vw;
+    color: black;
+}
+#CR_KAH_Box a{
+    text-decoration: none;
+    color: purple;
+}
 #layer2 {
     background-image: url('kart_gauche.JPG');
     opacity: 0.9;
@@ -553,6 +566,22 @@
 }
 
 
+#layer4-petit-titre1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 5vh;
+    left: 2vw;
+    right: 70vw;
+    font-size: 1.5vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+}
+
+#layer4-petit-titre1 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6vw;
+    color: black;
+}
 #layer5 {
     background-image: url('fond-perso.png');
     opacity: 0.9;

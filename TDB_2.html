@@ -11,25 +11,67 @@
             font-family: Arial, sans-serif;
         }
 
-        .Layer1, .Layer2, .Layer3 {
+        .parallax-container {
+            height: 100vh;
+            width: 100%;
             position: relative;
-            width: 100%;
-            height: 100vh; /* Chaque section prend la moitié de la hauteur de la fenêtre */
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;<
+            overflow: visible;
         }
-        .Layer1 img, .Layer2 img, .Layer3 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .parallax-layer {
+            flex: 0 0 100%;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100;
+            transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            position: relative;
+            filter: blur(10px); /* Pour s'assurer que l'image est nette initialement */
+            opacity: 0.5; /* Réduisez l'opacité si nécessaire */
+        }
+        .parallax-layer.visible {
+            filter: blur(0); /* Ajoutez un flou lorsque l'élément est visible */
+            opacity: 1; /* Réduisez l'opacité si nécessaire */
+        }
+        #layer1 {
+            background-image: url('fond-bleue.JPG');
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #layer2 {
+            background-image: url('fond-bleue2.JPG');
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #layer3 {
+            background-image: url('fond-bleue3.JPG');
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #layer1, #layer2, #layer3, #layer4, #layer5, #layer6 {
+            background-size: cover;
+            background-position: center;
+        }
+        .text-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+            z-index: 3;
+        }
+        .text-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+            z-index: 3;
         }
 
         #titre {
+            color: black;
             position: absolute;
             top: 8vh;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 2vw;
-            color: white;
             text-align: center;
             margin: 0;
         }
@@ -41,10 +83,14 @@
             text-decoration: none;
             color: white;
         }
+        #retour a{
+            text-decoration: none;
+            color: black;
+        }
         #petit-titre2 {
             position: absolute;
             font-size: 1.5vw;
-            color: white;
+            color: black;
             top: 3vh;
             right: 1.5vw;
             transition: font-size 0.2s ease;
@@ -57,48 +103,45 @@
         #petit-titre3 p{
             position: absolute;
             font-size: 1.5vw;
-            color: white;
-            top: 25vh;
+            color: black;
+            top: 35vh;
             left: 10vw;
             transition: font-size 0.2s ease;
+            right: 20%;
         }
         #petit-titre3 p:hover {
             font-family: "Rubik", sans-serif;
-            font-size: 1.8vw;
+            font-size: 1.7vw;
         }
-
-        .Layer2 h1 {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 3vw;
-            color: white;
+        #CDC_TDB {
+            color: purple;
+            text-decoration: none;
         }
-        .Layer3 h1 {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 3vw;
-            color: white;
+        #img_TDB{
+            float: right;
+        }
+        #layer2 img{
+            
         }
     </style>
 </head>
 <body>
-    <div class="Layer1">
-        <img src="fond-bleue.jpg" alt="Image de fond">
-        <div id="retour" ><a href="index.html" style="color: white; text-decoration: none;">←</a></div>
-        <div id="titre" ><h1><u>Projet TDB</u></h1></div>
-        <div id="petit-titre2"><p>Fait le 10/10/23</p></div>
-        <div id="petit-titre3"><p>Le client à fait du blablalblablablablablasdjkcgsduif<br><br><br>qsjkbschqsvqsvhc</p></div>
+    <div class="parallax-container">
+        <div class="parallax-layer" id="layer1">
+            <div id="retour"><a href="index.html">←</a></div>
+            <div id="titre" ><h1><u>Thermomètre de Bain</u></h1></div>
+            <div id="petit-titre2"><p>Commencer le 10/10/23</p></div>
+            <div id="petit-titre3"><p>Baby Corporation est une entreprise de produits pour nouveaux-nés qui souhaite élargir sa gamme de produits. Elle souhaite aujourd'hui étendre son catalogue vers une gamme d'accessoires pour le bain. C'est ainsi qu'elle entreprend de faire concevoir un thermomètre de bain. Ainsi le client à établit un Cahier Des Charges qui est présent juste en dessous.<br><br><a href="TDB_CDC_V1.pdf" target="_BLANK" id="CDC_TDB"><i>(Cahier des Charges)</i></a></p></div>
+        </div>
+        <div class="parallax-layer" id="layer2">
+            <div id="layer2-petit-titre1"><p>Avec mon équipe nous nous somme répartie les tâches pour être le plus productif</p></div>
+
+        </div>
+        <div class="parallax-layer" id="layer3">
+        </div>
     </div>
-    <div class="Layer2">
-        <img src="fond-bleue2.jpg" >
-        <h1>blablabla</h1>
-    </div>
-    <div class="Layer3">
-        <img src="fond-bleue3.jpg" >
-        <h1>Mais non</h1>
-    </div>
+    <script src="app.js"></script>
+    <script src="app-2.js"></script>
 </body>
 </html>
 

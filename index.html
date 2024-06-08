@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <title>Portfolio de TROUDI RAMY</title>
     <style>
         body{
@@ -36,8 +41,15 @@
             top: 30%;
             transform: translateY(-50%);
             z-index: 1;
+            font-family: "Lora", serif;
+            letter-spacing: 15px;
+        }
+        header h1::selection{
+            background-color: black;
+            color: whitesmoke;
         }
         header h3 {
+            font-family: 'Oswald', sans-serif;
             margin: 0;
             font-size: 1.5vw;
             color: whitesmoke; 
@@ -45,6 +57,10 @@
             top: 50%;
             transform: translateY(-50%);
             z-index: 1;
+        }
+        header h3::selection{
+            background-color: black;
+            color: whitesmoke;
         }
         section {
             padding: 100px 20px 50px 20px;
@@ -56,13 +72,27 @@
         .about {
             background: #96c099; /* Couleur verte pâle */
             color: black; /* Couleur bleue */
+            font-family: "Assistant", sans-serif;
+        }
+        .about ::selection{
+            background-color: black;
+            color: whitesmoke;
         }
         .about p{
             font-size: 1.5vw;
+
+        }
+        .about p::selection{
+            background-color: black;
+            color: whitesmoke;
         }
         .projects h2, .contact h2, .about h2{
             color: black; /* Couleur bleue */
-            font-size: 2.3vw; 
+            font-size: 2.3vw;
+        }
+        .projects h2::selection{
+            background-color: black;
+            color: whitesmoke;
         }
         .carousel {
             position: relative;
@@ -102,12 +132,29 @@
             padding: 20px;
             cursor: pointer;
         }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .indicator.active {
+            background-color: #333;
+        }
         .contact{
             background: #96c099; /* Couleur verte pâle */
         }
         .contact p{
             color: black;
-            font-size: 0.9vw;
+            font-size: 1.2vw;
         }
         .image-container {
             position: relative;
@@ -141,6 +188,18 @@
             border: none;
             border-radius: 5px;
         }
+        .projects u::selection{
+            background-color: black;
+            color: whitesmoke;
+        }
+        .contact p::selection{
+            background-color: black;
+            color: whitesmoke;
+        }
+        .contact u::selection{
+            background-color: black;
+            color: whitesmoke;
+        }
         .contact form button {
             padding: 10px 20px;
             border: none;
@@ -148,6 +207,10 @@
             color: #0a0a0a;
             cursor: pointer;
             border-radius: 5px;
+        }
+        .contact a{
+            color: black;
+            border-radius: 3px;
         }
         footer {
             background-color: rgba(0, 0, 0, 0.8);
@@ -157,6 +220,10 @@
         footer p{
             font-size: 0.6vw;
         }
+        footer p::selection{
+            color: black;
+            background-color: whitesmoke;
+        }
     </style>
 </head>
 <body>
@@ -165,7 +232,7 @@
             <source src="nature-1-5.mp4" type="video/mp4">
         </video>
         <h1>TROUDI RAMY</h1>
-        <h3>A la découverte du monde en passant par soi !!!</h3>
+        <h3>A la découverte du monde en passant par soi !</h3>
     </header>
 
     <section class="about">
@@ -201,6 +268,7 @@
         <button id="prevBtn">&#10094;</button>
         <button id="nextBtn">&#10095;</button>
     </div>
+    <div class="carousel-indicators" id="indicators"></div>
 </div>
 </section>
 
@@ -210,6 +278,7 @@
         <p>Email : <u>ramytroudi@gmail.com</u></p>
         <p>Téléphone : <u>06 40 59 40 58</u></p>
         <p>Linkedin : <u>Troudi Ramy</u></p>
+        <p>Curriculum vitæ : <a href="CV.pdf" id="cv" target="_BLANK"><u>Lien</u></a></p>
     </section>
 
     <footer>
@@ -218,30 +287,81 @@
 
     <script src="app.js"></script>
     <script src="app-2.js"></script>
-    <script>
-        const carouselInner = document.querySelector('.carousel-inner');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const totalItems = document.querySelectorAll('.carousel-item').length;
-        let currentIndex = 0;
 
-        function showProject(index) {
-            currentIndex = (index + totalItems) % totalItems;
-            const offset = -currentIndex * 100;
-            carouselInner.style.transform = 'translateX(' + offset + '%)';
+
+        <script>const carouselInner = document.querySelector('.carousel-inner');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicatorsContainer = document.getElementById('indicators');
+    const carousel = document.querySelector('.carousel');
+    const totalItems = document.querySelectorAll('.carousel-item').length;
+    let currentIndex = 0;
+
+    // Fonction pour afficher le projet
+    function showProject(index) {
+        currentIndex = (index + totalItems) % totalItems;
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = 'translateX(' + offset + '%)';
+        updateIndicators();
+    }
+
+    // Fonction pour initialiser les indicateurs
+    function initializeIndicators() {
+        for (var i = 0; i < totalItems; i++) {
+            var indicator = document.createElement("div");
+            indicator.classList.add("indicator");
+            indicator.setAttribute("data-index", i);
+            indicator.addEventListener("click", function () {
+                var index = parseInt(this.getAttribute("data-index"));
+                showProject(index);
+            });
+            indicatorsContainer.appendChild(indicator);
         }
+        updateIndicators();
+    }
 
-        prevBtn.addEventListener('click', () => {
-            showProject(currentIndex - 1);
+    // Fonction pour mettre à jour les indicateurs
+    function updateIndicators() {
+        var indicators = document.querySelectorAll(".indicator");
+        indicators.forEach(function (indicator, index) {
+            if (index === currentIndex) {
+                indicator.classList.add("active");
+            } else {
+                indicator.classList.remove("active");
+            }
         });
+    }
 
-        nextBtn.addEventListener('click', () => {
-            showProject(currentIndex + 1);
-        });
+    // Fonction pour afficher l'image précédente
+    function prevImage() {
+        showProject(currentIndex - 1);
+    }
 
-        showProject(currentIndex);
-    </script>
+    // Fonction pour afficher l'image suivante
+    function nextImage() {
+        showProject(currentIndex + 1);
+    }
 
+    // Défilement automatique du carrousel toutes les 7 secondes
+    var intervalId = setInterval(nextImage, 7000);
+
+    // Arrête le défilement automatique lorsque la souris survole le carrousel
+    carousel.addEventListener("mouseenter", function() {
+        clearInterval(intervalId);
+    });
+
+    // Reprend le défilement automatique lorsque la souris quitte le carrousel
+    carousel.addEventListener("mouseleave", function() {
+        intervalId = setInterval(nextImage, 7000);
+    });
+
+    prevBtn.addEventListener('click', prevImage);
+    nextBtn.addEventListener('click', nextImage);
+
+    // Initialisation du carousel
+    initializeIndicators();
+    showProject(currentIndex);
+</script>
 
 </body>
 </html>
