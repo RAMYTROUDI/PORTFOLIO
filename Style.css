@@ -850,6 +850,41 @@
     transform: translateX(-50%); /* Center horizontally */
     z-index: 2;
 }
+#Competence1 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 65vh;
+    left: 8vw;
+    right: 45vw;
+    font-size: 1vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+    color: rgb(192, 0, 0, 1.0);
+}
+
+#Comptence1 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2vw;
+    color: rgb(192, 0, 0, 1.0);
+}
+#Competence2 p{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 65vh;
+    left: 50vw;
+    right: 2vw;
+    font-size: 1vw;
+    z-index: 3;
+    transition: font-size 0.2s ease;
+    color: rgb(247, 145, 82, 1.0);
+}
+
+#Comptence2 p:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2vw;
+    color: black;
+    color: rgb(247, 145, 82, 1.0);
+}
 
 footer {;
     text-align: center;
