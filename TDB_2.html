@@ -123,6 +123,272 @@
         #layer2 img{
             
         }
+
+        .Layer3 h1 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3vw;
+        }
+
+        #layer3-petit-titre1 p{
+            font-family: "Rubik", sans-serif;
+            position: absolute;
+            top: 2vh;
+            left: 5vw;
+            font-size: 1.9vw;
+            z-index: 3;
+        }
+
+        #layer3-petit-titre1 p::selection{
+            background-color: black;
+            color: whitesmoke;
+        }
+
+
+
+        .flip-card3 .front3, .flip-card3 .back3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            text-align: center; /* Centrer le texte */
+            word-wrap: break-word; /* Permet au texte de passer à la ligne */
+            padding: 10px; /* Ajuste le padding pour le texte */
+            z-index: 7;
+            border: 2px solid black;
+            border-radius: 5%;
+        }
+
+        .flip-card4 .front4, .flip-card4 .back4 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            text-align: center; /* Centrer le texte */
+            word-wrap: break-word; /* Permet au texte de passer à la ligne */
+            padding: 10px; /* Ajuste le padding pour le texte */
+            z-index: 2;
+            border: 2px solid black;
+            border-radius: 5%;
+        }
+
+        .flip-card3 .front3 {
+            color: black;
+            font-size: 2vw;
+            background-color: rgb(192, 0, 0, 1.0);
+        }
+
+        .flip-card4 .front4{
+            color: black;
+            font-size: 2vw;
+            background-color: rgb(247, 145, 82, 1.0);
+        }
+
+        .flip-card3 .back3 {
+            font-size: 1.6vw;
+            letter-spacing: 0.05vw;
+            color: black;
+            transform: rotateY(180deg);
+            z-index: 2;
+            background-color: rgb(192, 0, 0, 1.0);
+        }
+
+        .flip-card4 .back4 {
+            font-size: 1.6vw;
+            letter-spacing: 0.05vw;
+            color: black;
+            transform: rotateY(180deg);
+            z-index: 2;
+            background-color: rgb(247, 145, 82, 1.0);
+        }
+
+        /* Custom position for the card */
+        .custom-position3 {
+            position: absolute; /* or relative, depending on your layout */
+            top: 30vh; /* Adjust the top position */
+            left: 20vw; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 2;
+        }
+
+        .custom-position4 {
+            position: absolute; /* or relative, depending on your layout */
+            top: 30vh; /* Adjust the top position */
+            left: 70vw; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 2;
+        }
+
+        .flip-card3{
+            width: 25vw; /* Fixe la largeur de la carte */
+            height: 35vh; /* Fixe la hauteur de la carte */
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            position: relative;
+        }
+
+        .flip-card3:hover {
+            transform: rotateY(180deg);
+        }
+
+        #layer3-petit-titre2 p{
+            font-family: "Rubik", sans-serif;
+            position: absolute;
+            top: 95vh;
+            left: 45vw;
+            font-size: 0.9vw;
+            z-index: 3;
+        }
+
+        #layer3-petit-titre2 p::selection{
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        .flip-card4 {
+            width: 25vw; /* Fixe la largeur de la carte */
+            height: 35vh; /* Fixe la hauteur de la carte */
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            position: relative;
+        }
+
+        .flip-card4:hover {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card3 .front3, .flip-card4 .back4 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            text-align: center; /* Centrer le texte */
+            word-wrap: break-word; /* Permet au texte de passer à la ligne */
+            padding: 10px; /* Ajuste le padding pour le texte */
+            z-index: 7;
+            border: 2px solid black;
+            border-radius: 5%;
+        }
+
+        .flip-card3 .front3, .flip-card4 .back4 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            text-align: center; /* Centrer le texte */
+            word-wrap: break-word; /* Permet au texte de passer à la ligne */
+            padding: 10px; /* Ajuste le padding pour le texte */
+            z-index: 2;
+            border: 2px solid black;
+            border-radius: 5%;
+        }
+
+        .flip-card3 .front3 {
+            color: black;
+            font-size: 1.6vw;
+            background-color: rgb(192, 0, 0, 1.0);
+        }
+
+        .flip-card4 .front4{
+            color: black;
+            font-size: 1.6vw;
+            background-color: rgb(247, 145, 82, 1.0);
+        }
+
+        .flip-card3 .back3 {
+            font-size: 1.1vw;
+            letter-spacing: 0.05vw;
+            color: black;
+            transform: rotateY(180deg);
+            z-index: 2;
+            background-color: rgb(242, 220, 219, 1.0);
+        }
+
+        .flip-card4 .back4 {
+            font-size: 1.1vw;
+            letter-spacing: 0.05vw;
+            color: black;
+            transform: rotateY(180deg);
+            z-index: 2;
+            background-color: rgb(253, 234, 218, 1.0);
+        }
+
+        /* Custom position for the card */
+        .custom-position3 {
+            position: absolute; /* or relative, depending on your layout */
+            top: 27vh; /* Adjust the top position */
+            left: 25vw; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 2;
+        }
+
+
+        .custom-position4 {
+            position: absolute; /* or relative, depending on your layout */
+            top: 27vh; /* Adjust the top position */
+            left: 60vw; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 2;
+        }
+        #Competence1 p{
+            font-family: "Rubik", sans-serif;
+            position: absolute;
+            top: 65vh;
+            left: 8vw;
+            right: 45vw;
+            font-size: 1vw;
+            z-index: 3;
+            transition: font-size 0.2s ease;
+            color: rgb(192, 0, 0, 1.0);
+        }
+
+        #Comptence1 p:hover {
+            font-family: "Rubik", sans-serif;
+            font-size: 1.2vw;
+            color: rgb(192, 0, 0, 1.0);
+        }
+        #Competence2 p{
+            font-family: "Rubik", sans-serif;
+            position: absolute;
+            top: 65vh;
+            left: 50vw;
+            right: 2vw;
+            font-size: 1vw;
+            z-index: 3;
+            transition: font-size 0.2s ease;
+            color: rgb(247, 145, 82, 1.0);
+        }
+
+        #Comptence2 p:hover {
+            font-family: "Rubik", sans-serif;
+            font-size: 1.2vw;
+            color: black;
+            color: rgb(247, 145, 82, 1.0);
+        }
+
+        footer {;
+            text-align: center;
+        }
+        footer p{
+            font-size: 0.6vw;
+        }
     </style>
 </head>
 <body>
@@ -138,7 +404,38 @@
 
         </div>
         <div class="parallax-layer" id="layer3">
+            <div class="parallax-layer" id="layer3">
+            <div id="layer3-petit-titre1" class="text-element"><p><u>COMPÉTENCE</u></p></div>
+        <div class="flip-container custom-position3">
+        <div class="flip-card3">
+            <div class="front3">
+                <p><i>CONCEVOIR</i></p>
+            </div>
+            <div class="back3">
+                <p>Mener une conception partielle intégrante une démarche projet</p>
+            </div>
         </div>
+    </div>
+        <div class="flip-container custom-position4">
+        <div class="flip-card4">
+            <div class="front4">
+                <p><i>VÉRIFIER</i></p>
+            </div>
+            <div class="back4">
+                <p>Effectuer les tests et mesures nécessaires à une vérification d'un système</p>
+            </div>
+        </div>
+        </div>
+        <div id="Competence1"><p>AC11.01 | Produire une analyse fonctionelle d'un système simple<br><br>AC11.02 | Réaliser un prototype pour des solutions techniques matériels et/ou logiciel<br><br>AC11.03 | Rédiger un dossier de frabrication à partir d'un dossier de conception</p></div>
+        <div id="Competence2"><p>AC12.01 | Appliquer une procédure d'essais<br><br>AC12.02 | Identifier un dysfonctionnement<br><br>AC12.03 | Décrire un dysfonctionnement</p></div>
+
+        </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 TROUDI RAMY. Tous droits réservés.</p>
+        </footer>
+        
     </div>
     <script src="app.js"></script>
     <script src="app-2.js"></script>
