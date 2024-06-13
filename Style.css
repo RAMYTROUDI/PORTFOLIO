@@ -210,6 +210,7 @@
 
 #deuxieme-page{
     background-color: whitesmoke;
+    scroll-behavior: smooth; 
 }
 
 
@@ -232,13 +233,13 @@
     width: 100;
     transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
     position: relative;
-    filter: blur(10px); /* Pour s'assurer que l'image est nette initialement */
-    opacity: 0.5; /* Réduisez l'opacité si nécessaire */
+    filter: blur(10px); 
+    opacity: 0.5; 
 }
 
 .parallax-layer.visible {
-    filter: blur(0); /* Ajoutez un flou lorsque l'élément est visible */
-    opacity: 1; /* Réduisez l'opacité si nécessaire */
+    filter: blur(0); 
+    opacity: 1; 
 }
 
 
@@ -368,6 +369,10 @@
     text-decoration: none;
     color: purple;
 }
+#CR_KAH_Box p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
 #layer2 {
     background-image: url('kart_gauche.JPG');
     opacity: 0.9;
@@ -401,8 +406,8 @@
 }
 
 .flip-card {
-    width: 300px; /* Fixe la largeur de la carte */
-    height: 200px; /* Fixe la hauteur de la carte */
+    width: 300px; 
+    height: 200px; 
     transform-style: preserve-3d;
     transition: transform 0.6s;
     position: relative;
@@ -421,9 +426,9 @@
     align-items: center;
     backface-visibility: hidden;
     box-sizing: border-box;
-    text-align: center; /* Centrer le texte */
-    word-wrap: break-word; /* Permet au texte de passer à la ligne */
-    padding: 10px; /* Ajuste le padding pour le texte */
+    text-align: center; 
+    word-wrap: break-word; 
+    padding: 10px;
     z-index: 7;
     border: 2px solid black;
     border-radius: 5%;
@@ -438,9 +443,9 @@
     align-items: center;
     backface-visibility: hidden;
     box-sizing: border-box;
-    text-align: center; /* Centrer le texte */
-    word-wrap: break-word; /* Permet au texte de passer à la ligne */
-    padding: 10px; /* Ajuste le padding pour le texte */
+    text-align: center; 
+    word-wrap: break-word; 
+    padding: 10px; 
     z-index: 2;
     border: 2px solid black;
     border-radius: 5%;
@@ -476,21 +481,21 @@
     background-color: #E2E9C0;
 }
 
-/* Custom position for the card */
+
 .custom-position1 {
-    position: absolute; /* or relative, depending on your layout */
-    top: 20vh; /* Adjust the top position */
-    left: 20vw; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+    position: absolute; 
+    top: 20vh; 
+    left: 20vw; 
+    transform: translateX(-50%); 
     z-index: 2;
 }
 
 
 .custom-position2 {
-    position: absolute; /* or relative, depending on your layout */
-    top: 20vh; /* Adjust the top position */
-    left: 45vw; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+    position: absolute; 
+    top: 20vh; 
+    left: 45vw; 
+    transform: translateX(-50%); 
     z-index: 2;
 }
 
@@ -582,6 +587,10 @@
     font-size: 1.6vw;
     color: black;
 }
+#layer4-petit-titre1 p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
 #layer5 {
     background-image: url('fond-perso.png');
     opacity: 0.9;
@@ -604,7 +613,7 @@
     color: black;
 }
 
-#layer5-petit-titre1 p::selection{
+#layer5-petit-titre1 p u::selection{
     background-color: black;
     color: whitesmoke;
 }
@@ -612,13 +621,27 @@
 
 .boite_video {
     position: absolute;
-    top: 44vh;
-    left: 67vw;
+    top: 50vh;
+    left: 30vw;
     transform: translate(-50%, -50%);
 }
 
 .vid_presentation {
-    width: 60vw; /* Ajustez la largeur selon vos besoins */
+    width: 60vw; 
+    height: 65vh;
+}
+
+
+
+.boite_video_finale {
+    position: absolute;
+    top: 52.5vh;
+    left: 78vw;
+    transform: translate(-50%, -50%);
+}
+
+.vid_presentation_finale {
+    width: 21vw; 
     height: 70vh;
 }
 
@@ -643,7 +666,7 @@
     z-index: 3;
 }
 
-#layer6-petit-titre1 p::selection{
+#layer6-petit-titre1 p u::selection{
     background-color: black;
     color: whitesmoke;
 }
@@ -855,19 +878,27 @@
     position: absolute;
     top: 65vh;
     left: 8vw;
-    right: 45vw;
+    right: 50vw;
     font-size: 1vw;
     z-index: 3;
     transition: font-size 0.2s ease;
     color: rgb(192, 0, 0, 1.0);
 }
 
-#Comptence1 p:hover {
-    font-family: "Rubik", sans-serif;
-    font-size: 1.2vw;
-    color: rgb(192, 0, 0, 1.0);
+#Competence1 p a {
+    text-decoration: none;
+    color: rgb(192, 0, 0);
+    font-size: 1vw;
+    transition: font-size 0.2s ease, background-color 0.2s ease;
 }
-#Competence2 p{
+
+#Competence1 p a:hover {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.1vw;
+}
+
+
+#Competence2 p {
     font-family: "Rubik", sans-serif;
     position: absolute;
     top: 65vh;
@@ -879,20 +910,30 @@
     color: rgb(247, 145, 82, 1.0);
 }
 
-#Comptence2 p:hover {
-    font-family: "Rubik", sans-serif;
-    font-size: 1.2vw;
-    color: black;
-    color: rgb(247, 145, 82, 1.0);
+#Competence2 p a {
+    text-decoration: none;
+    color: rgb(247, 145, 82);
+    font-size: 1vw;
+    transition: font-size 0.2s ease, background-color 0.2s ease;
 }
 
-footer {;
+#Competence2 p a:hover {
+    font-size: 1.1vw;
+}
+
+
+
+footer {
     text-align: center;
 }
 footer p{
     font-size: 0.6vw;
 }
 
+footer p::selection{
+    background-color: black;
+    color: whitesmoke;
+}
 
 
 

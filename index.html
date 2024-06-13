@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <title>Portfolio de TROUDI RAMY</title>
+    <link rel="icon" href="feuille.PNG" type="image/PNG">
+    <title>Portfolio</title>
     <style>
         body{
             margin: 0;
@@ -19,7 +20,7 @@
         }
         header {
             position: relative;
-            height: 50vh; /* Hauteur réduite */
+            height: 50vh; 
             overflow: hidden;
             text-align: center;
         }
@@ -70,8 +71,8 @@
             padding: 5px;
         }
         .about {
-            background: #96c099; /* Couleur verte pâle */
-            color: black; /* Couleur bleue */
+            background: #96c099; 
+            color: black; 
             font-family: "Assistant", sans-serif;
         }
         .about ::selection{
@@ -80,7 +81,6 @@
         }
         .about p{
             font-size: 1.5vw;
-
         }
         .about p::selection{
             background-color: black;
@@ -94,23 +94,31 @@
             background-color: black;
             color: whitesmoke;
         }
+        #grand-titre1{
+            color: black;
+            font-size: 1.6vw;
+        }
+        #grand-titre1 i::selection{
+            background-color: black;
+            color: whitesmoke;
+        }
         .carousel {
             position: relative;
-            width: 92%; /* Ajuste la largeur de la section du carousel */
+            width: 92%; 
             margin: auto;
             overflow: hidden;
         }
         .carousel-inner {
             display: flex;
             transition: transform 0.5s ease;
-            width: 100%; /* Assure que le carousel occupe toute la largeur de son conteneur */
+            width: 100%; 
         }
         .carousel-item {
-            flex: 0 0 100%; /* Ajuste la largeur des éléments */
+            flex: 0 0 100%; 
             box-sizing: border-box;
             padding: 0px;
-            text-align: center; /* Centre le contenu */
-            width: 100%; /* Assure que chaque élément occupe toute la largeur du carousel */
+            text-align: center; 
+            width: 100%; 
         }
         .carousel-item img {
             width: 100%;
@@ -237,7 +245,8 @@
 
     <section class="about">
         <h2><u>À PROPOS DE MOI</u></h2>
-        <p>Je suis actuellement étudiant à GEII à l'université de bordeaux en 1er année, voulant me spécialisé vers l'Automatisme qui met en valeur les compétences d'électronique et d'Informatique. Etant mes deux domaines qui me passionne le plus. Vous me découvrirez a travers ce PortFolio qui va aborder mes projets et mes compétences.</p>
+        <p>Je suis actuellement étudiant à GEII à l'université de bordeaux en 1er année, voulant me spécialisé vers l'Automatisme qui met en valeur les compétences d'électronique et d'Informatique. Etant mes deux domaines qui me passionne le plus. Vous me découvrirez a travers ce PortFolio qui va aborder mes projets et mes compétences.<br><br>
+        Curriculum vitæ : <a href="CV.pdf" target="_BLANK"><u>Lien</u></a></p>
     </section>
 
 
@@ -247,20 +256,23 @@
     <div class="carousel-inner">
         <div class="carousel-item">
             <div class="image-container">
+                <h2 id="grand-titre1"><u>Formation :</u><i>Génie Electrique et Informatique Industrielle</i></h2>
                 <img src="maquette.jpg" class="project-image">
-                <a href="SLR.html" class="btn-on-image">Cliquez ici</a>
+                <a href="SLR.html" class="btn-on-image">Découvrir</a>
             </div>
         </div>
         <div class="carousel-item">
             <div class="image-container">
+                <h2 id="grand-titre1"><u>Formation :</u> <i>Génie Electrique et Informatique Industrielle</i></h2>
                 <img src="img-slide2_cut.jpg" class="project-image">
-                <a href="TDB_2.html" class="btn-on-image">Cliquez ici</a>
+                <a href="TDB_2.html" class="btn-on-image">Découvrir</a>
             </div>
         </div>
         <div class="carousel-item">
             <div class="image-container">
+                <h2 id="grand-titre1"><u>Formation :</u> <i>Génie Electrique et Informatique Industrielle</i></h2>
                 <img src="img-slide3_cut.png" class="project-image">
-                <a href="KART.html" class="btn-on-image">Cliquez ici</a>
+                <a href="KART.html" class="btn-on-image">Découvrir</a>
             </div>
         </div>
     </div>
@@ -278,7 +290,6 @@
         <p>Email : <u>ramytroudi@gmail.com</u></p>
         <p>Téléphone : <u>06 40 59 40 58</u></p>
         <p>Linkedin : <u>Troudi Ramy</u></p>
-        <p>Curriculum vitæ : <a href="CV.pdf" id="cv" target="_BLANK"><u>Lien</u></a></p>
     </section>
 
     <footer>
